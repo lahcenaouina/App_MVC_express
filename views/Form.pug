@@ -1,0 +1,22 @@
+doctype html
+include Layouts/Header
+include Layouts/Navbar
+h1 Sample Form
+form(action='/submit' method='POST')
+    // Input for a text field
+    label(for='name') Name:
+    input#name(type='text' name='name' required='')
+    br
+    br
+    // Input for an email field
+    label(for='email') Email:
+    input#email(type='email' name='email' required='')
+    br
+    br
+    // Input for a password field
+    label(for='password') Password:
+    input#password(type='password' name='password' required='')
+    br
+    br
+    // Input for a submit button
+    input(type='submit' value='Submit')

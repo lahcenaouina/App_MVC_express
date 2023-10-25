@@ -1,0 +1,12 @@
+
+html
+    include Layouts/Header
+    body
+        include Layouts/Navbar
+        h1= title
+
+        if isLoggedIn
+            p You are logged in.
+            a(href='/login') Login
+        else
+            p Please log in.

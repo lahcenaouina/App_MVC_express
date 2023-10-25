@@ -1,0 +1,33 @@
+include Layouts/Header
+include Layouts/Navbar
+main.my-form.mt-5
+  .cotainer
+    
+    .row.justify-content-center
+      .col-md-8
+        .card
+          .card-header Register New Account
+          .card-body
+            form(name='my-form' action='' method='POST')
+              if MessageUrlDanger
+                .row.alert.alert-info #{MessageUrlDanger}
+              .form-group.row.mt-2
+                label.col-md-4.col-form-label.text-md-right(for='fullname') Full Name : 
+                .col-md-6
+                  input#full_name.form-control(type='text' name='fullname')
+              .form-group.row.mt-2
+                label.col-md-4.col-form-label.text-md-right(for='email') E-Mail Address : 
+                .col-md-6
+                  input#email_address.form-control(type='text' name='email')
+              .form-group.row.mt-2
+                label.col-md-4.col-form-label.text-md-right(for='pwd') Password : 
+                .col-md-6
+                  input#user_name.form-control(type='password' name='pwd')
+              .form-group.row.mt-2
+                label.col-md-4.col-form-label.text-md-right(for='rpwd') Repeat Password : 
+                .col-md-6
+                  input#user_name.form-control(type='password' name='rpwd')
+       
+              .col-md-6.offset-md-6.mt-2.flex.justify-content-evenly
+                button.btn.btn-dark(type='submit')
+                  | Register

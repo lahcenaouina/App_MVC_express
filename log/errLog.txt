@@ -1,0 +1,22 @@
+LOG : TIME : 1698235589909 	 UUID : a49755f8-b319-4190-a0b0-127d51b10fbc 	 Error: C:\Users\Lahcen\Desktop\NODE JS\views\FormSignUp.pug:22:19
+
+input is a self closing element: <input/> but contains nested content. : GET : undefined 
+LOG : TIME : 1698235595705 	 UUID : b142efd4-8636-4862-88b9-62073d313572 	 Error: C:\Users\Lahcen\Desktop\NODE JS\views\FormSignUp.pug:22:73
+
+input is a self closing element: <input/> but contains nested content. : GET : undefined 
+LOG : TIME : 1698235605793 	 UUID : fd933cae-a1c8-414d-9901-9511f56c46e5 	 Error: C:\Users\Lahcen\Desktop\NODE JS\views\FormSignUp.pug:22:19
+
+input is a self closing element: <input/> but contains nested content. : GET : undefined 
+LOG : TIME : 1698236578879 	 UUID : 5ed175b3-5e2c-43c3-9d04-6b98464f3791 	 Error: Failed to lookup view "FormSign" in views directory "C:\Users\Lahcen\Desktop\NODE JS\views" : GET : undefined 
+LOG : TIME : 1698236578917 	 UUID : 9a6d6953-2fc0-4bf4-b147-18bd97e181f5 	 Error: Failed to lookup view "FormSign" in views directory "C:\Users\Lahcen\Desktop\NODE JS\views" : GET : undefined 
+LOG : TIME : 1698236591560 	 UUID : 38592a7f-7a25-4b6e-b39c-acf5174139fa 	 Error: Failed to lookup view "FormSign" in views directory "C:\Users\Lahcen\Desktop\NODE JS\views" : GET : undefined 
+LOG : TIME : 1698241499841 	 UUID : af79cbab-fa21-448b-8e30-9b05bc40a0c1 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241709949 	 UUID : 71414081-db4d-4d82-b03d-e066a0a058a9 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241755087 	 UUID : 41817e7b-b2f9-4035-a325-ebf509d7cc71 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241799447 	 UUID : e6dbe446-4025-4324-af68-f2605f51bce1 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241823847 	 UUID : 3f91ce54-bbea-4f7b-9de1-f7ce7fd7b684 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241931529 	 UUID : 271642e7-f3b6-4946-b461-93cb0a14c0be 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241959066 	 UUID : 15cc1d7c-d216-44d6-8629-df602b45c7c4 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698241968816 	 UUID : 61a35f46-d311-4867-829d-710a0a0f2c6b 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698242243870 	 UUID : 6b3865d2-54ed-4411-9924-2fa151a9d61d 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698242284543 	 UUID : 89205d35-1041-4513-b4c9-aa1558a32957 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 

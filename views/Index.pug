@@ -1,0 +1,8 @@
+html
+    include Layouts/Header
+    body
+        include Layouts/Navbar
+        if isLoggedIn
+            p You are logged in.
+        else
+            p Please log in.
