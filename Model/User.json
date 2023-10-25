@@ -1,1 +1,20 @@
-[{"id":0,"fullname":"lahcen","email":"email@gmail.com","hashed_pwd":"HashedPwd"},{"id":2,"fullname":"lahcen","email":"Lahcenaouina@gmail.com","hashed_pwd":"$2b$10$Ufe6Llc.uGCNshYqAnQ47OZxltV8J58i6rgHN5236sFrG4I/Mhppu"},{"id":3,"fullname":"ahmed","email":"Rockgamer.3.rg@gmail.com","hashed_pwd":"$2b$10$InQgCazCQlzKtj5fuv8tKu8oM7fl8blRcavgE629BP16kLZMP4fEO"}]
+[
+        {
+                "id": 0,
+                "fullname": "lahcen",
+                "email": "email@gmail.com",
+                "hashed_pwd": "HashedPwd"
+        },
+        {
+                "id": 2,
+                "fullname": "lahcen",
+                "email": "Lahcenaouina@gmail.com",
+                "hashed_pwd": "$2b$10$Ufe6Llc.uGCNshYqAnQ47OZxltV8J58i6rgHN5236sFrG4I/Mhppu"
+        },
+        {
+                "id": 3,
+                "fullname": "ahmed",
+                "email": "Rockgamer.3.rg@gmail.com",
+                "hashed_pwd": "$2b$10$InQgCazCQlzKtj5fuv8tKu8oM7fl8blRcavgE629BP16kLZMP4fEO"
+        }
+]
