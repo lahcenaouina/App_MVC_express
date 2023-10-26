@@ -16,5 +16,23 @@
                 "fullname": "ahmed",
                 "email": "Rockgamer.3.rg@gmail.com",
                 "hashed_pwd": "$2b$10$InQgCazCQlzKtj5fuv8tKu8oM7fl8blRcavgE629BP16kLZMP4fEO"
+        },
+        {
+                "id": 4,
+                "fullname": "khraz",
+                "email": "khraz@gmail.com",
+                "hashed_pwd": "$2b$10$VQO2izCKB5fFziuZtFWms.mh5SdWYpN.plJw3pHZ7rgJXyU2szu9O"
+        },
+        {
+                "id": 5,
+                "fullname": "azezae",
+                "email": "azezae@dfsdf",
+                "hashed_pwd": "$2b$10$g5fpIVIxGGEYjMGU/hvzfuUDAoHoJ3CU5QfZksfkJdJbGPg/LczCW"
+        },
+        {
+                "id": 6,
+                "fullname": "lahcen",
+                "email": "aouina",
+                "hashed_pwd": "$2b$10$DOGoTO8LW5kJcVK2/42XleoSXinaPbfFU.96YIUoMK2YdiOmq0HA."
         }
 ]

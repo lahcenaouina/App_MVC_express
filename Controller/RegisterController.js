@@ -20,8 +20,7 @@ const signupForm = (req, res) => {
 
 const HandleNewUser = async (req, res) => {
   const { fullname, email, pwd, rpwd } = req.body;
-
-  console.log(req.body);
+  
   if (!fullname | !email | !pwd | !rpwd)
     return res.status(400).render("FormSignUp", {
       title: "SignUp : Missing Input field",
