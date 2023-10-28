@@ -2,6 +2,7 @@ const { render } = require("pug");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 const path = require("path");
+const UserModel = require('../Model/User')
 
 //Simulation for data
 filePath = path.join(__dirname, "..", "Model", "User.json");
@@ -43,6 +44,9 @@ const HandleNewUser = async (req, res) => {
   const HashedPwd = await bcrypt.hash(pwd, 10);
   //Insert into db
   try {
+    //Add to db 
+    UserModel.AddNewUser(fullname , email , HashedPwd)
+    //just for simulation learning JWT
     UserDb.setUsers([
       ...UserDb.Users,
       {
@@ -60,6 +64,8 @@ const HandleNewUser = async (req, res) => {
         console.log("Data has been written to the file.");
       }
     });
+
+    // 
   } catch (e) {
     res.status(500).send(e.message);
   } finally {

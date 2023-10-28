@@ -10,11 +10,15 @@ Router.use(express.json()); // for parsing application/json
 Router.use(express.urlencoded({extended: true}));
 
 
+
+
 const Mainctrl = new MainController();
 
 Router.all('/', Mainctrl.index);
 
 Router.get('/about', Mainctrl.about);
+
+Router.get('/Profile', Mainctrl.about);
 
 Router.get('/login', Mainctrl.login);
 
