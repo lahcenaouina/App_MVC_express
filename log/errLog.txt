@@ -21,3 +21,4 @@ LOG : TIME : 1698241968816 	 UUID : 61a35f46-d311-4867-829d-710a0a0f2c6b 	 Error
 LOG : TIME : 1698242243870 	 UUID : 6b3865d2-54ed-4411-9924-2fa151a9d61d 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
 LOG : TIME : 1698242284543 	 UUID : 89205d35-1041-4513-b4c9-aa1558a32957 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
 LOG : TIME : 1698311310466 	 UUID : b288211a-7ee4-4174-991f-886ea6a798e8 	 Error: Cannot set headers after they are sent to the client : POST : http://localhost:3500 
+LOG : TIME : 1698508220033 	 UUID : 4f944898-2f1f-4510-b35e-053e3d89f781 	 Error: secret option required for sessions : GET : undefined 
