@@ -2,79 +2,64 @@ const { render } = require("pug");
 const bcrypt = require("bcrypt");
 const fs = require("fs");
 const path = require("path");
-const UserModel = require('../Model/User')
-
-//Simulation for data
-filePath = path.join(__dirname, "..", "Model", "User.json");
-const UserDb = {
-  Users: require("../Model/User.json"),
-  setUsers: function (state) {
-    return (this.Users = state);
-  },
-};
+const UserModel = require("../Model/User");
+const { Hash } = require("crypto");
+const { error } = require("console");
 
 const signupForm = (req, res) => {
   res.render("FormSignUp", { title: "Signup" });
-
 };
-
-
 
 const HandleNewUser = async (req, res) => {
   const { fullname, email, pwd, rpwd } = req.body;
-  
+
   if (!fullname | !email | !pwd | !rpwd)
-    return res.status(400).render("FormSignUp", {
+    return res.status(400).json({
       title: "SignUp : Missing Input field",
       MessageUrlDanger: "Please make sure to complete all the inputs.",
     });
-  //check email :
-  if (UserDb.Users.find((user) => user.email == email)) {
-    res.status(400).render("FormSignUp", {
-      title: "SignUp : The email has already been registered.",
-      MessageUrlDanger: "The email has already been registered.",
-    });
+
+  try {
+    const emailExists = await UserModel.isEmailAddressExist(email);
+    if (emailExists) {
+      res.status(400).json({
+        title: email + "SignUp : The email has already been registered.",
+        MessageUrlDanger: "The email has already been registered.",
+      });
+    }
+  } catch (err) {
+    console.error("Error:", err);
   }
   if (pwd !== rpwd) {
-        return res.status(400).render("FormSignUp", {
-          title: "SignUp",
-          MessageUrlDanger: "Password not matched.",
-        });
-      }
+    return res.status(400).json({
+      title: "SignUp",
+      MessageUrlDanger: "Password not matched.",
+    });
+  }
   //hash password
   const HashedPwd = await bcrypt.hash(pwd, 10);
-  //Insert into db
-  try {
-    //Add to db 
-    UserModel.AddNewUser(fullname , email , HashedPwd)
-    //just for simulation learning JWT
-    UserDb.setUsers([
-      ...UserDb.Users,
-      {
-        id: UserDb.Users.length + 1,
-        fullname: fullname,
-        email: email,
-        hashed_pwd: HashedPwd,
-      },
-    ]);
-
-    fs.writeFile(filePath, JSON.stringify(UserDb.Users), "utf8", (err) => {
-      if (err) {
-        console.error("Error writing to file:", err);
+  // Insert into db
+  await UserModel.AddNewUser(
+    fullname,
+    email,
+    HashedPwd,
+    UserModel.TYPE.USER,
+    (err, result) => {
+      if (!err) {
+        if (result.affectedRows === 1)
+          return res.status(201).json({
+            status: "Success",
+            Message: "Compte was created successfully",
+          });
       } else {
-        console.log("Data has been written to the file.");
+        // Handle the error
+        console.error("Error:", err);
       }
-    });
-
-    // 
-  } catch (e) {
-    res.status(500).send(e.message);
-  } finally {
-    res.status(200).json(UserDb.Users)
-  }
+    }
+  );
 };
 
 module.exports = {
   HandleNewUser,
-  signupForm
+  signupForm,
 };
